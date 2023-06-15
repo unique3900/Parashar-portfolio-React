@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import NavBar from './components/NavBar';
 
 const Container = styled.div`
 height:100vh;
@@ -16,7 +17,7 @@ background: url("./img/bg.jpeg");
 const App = () => {
   return (
     <Container>
-      
+        <NavBar/>
     </Container>
   )
 }
