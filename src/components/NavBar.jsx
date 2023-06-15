@@ -9,19 +9,15 @@ const NavBar = () => {
     const [navState, setnavState] = useState(false);
     
     return (
-        <div className='w-[100%] bg-transparent py-4 px-4 '>
-            <div className="flex items-center justify-around">
+        <div className='fixed -z-1 w-[100%] bg-transparent py-4 px-4 '>
+           
             <GiHamburgerMenu className=' lg:hidden w-8 h-10 cursor-pointer'
                 onClick={
                     () => {
                         setnavState(!navState)
                     }
                 }/>
-
-            <img src={`./img/logo.png`}
-                className=' flex lg:hidden w-44 h-36 object-cover'
-                alt=""/>
-            </div>
+          
           
 
             <div className={`hidden lg:flex p-5 flex-row justify-around items-center gap-4`}>
@@ -42,7 +38,7 @@ const NavBar = () => {
 
             {
             navState == true && (
-                <div className={`flex lg:hidden p-5 flex-col justify-around items-start gap-4`}>
+                <div className={`flex z-10 fixed lg:hidden p-5 flex-col justify-around items-start gap-4 py-10`}>
 
                     <ul className="flex flex-col lg:flex-row justify-between gap-10">
                         <li className="text-lg font-bold">Home</li>
