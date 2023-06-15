@@ -9,9 +9,9 @@ const NavBar = () => {
     const [navState, setnavState] = useState(false);
     
     return (
-        <div className='fixed -z-1 w-[100%] bg-transparent py-4 px-4 '>
+        <div className='fixed z-30 w-[100%] bg-transparent py-4 px-4 '>
            
-            <GiHamburgerMenu className=' lg:hidden w-8 h-10 cursor-pointer'
+            <GiHamburgerMenu className=' lg:hidden w-10 h-10 cursor-pointer p-2'
                 onClick={
                     () => {
                         setnavState(!navState)
@@ -38,7 +38,7 @@ const NavBar = () => {
 
             {
             navState == true && (
-                <div className={`flex z-10 fixed lg:hidden p-5 flex-col justify-around items-start gap-4 py-10`}>
+                <div className={`flex -z-10 mb-6 bg-white bg-opacity-90 text-black fixed lg:hidden p-5 flex-col justify-center items-center place-items-center gap-4 py-10`}>
 
                     <ul className="flex flex-col lg:flex-row justify-between gap-10">
                         <li className="text-lg font-bold">Home</li>

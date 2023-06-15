@@ -11,6 +11,9 @@ scroll-behavior: smooth;
 overflow-y: auto;
 scrollbar-width:none;
 color: white;
+display: flex;
+flex-direction: column;
+gap: 10px;
 background: url("./img/bg.jpeg");
 &::-webkit-scrollbar{
   display: none;
@@ -21,9 +24,9 @@ const App = () => {
     <>
      
       <Container>
-      <NavBar/>
-      <Hero />
-      <Skills/>
+          <NavBar/>
+          <Hero />
+          {/* <Skills/> */}
     </Container>
     </>
     
