@@ -1,57 +1,51 @@
 import React, {
-    useEffect,
     useState
 } from 'react'
 import {
     GiHamburgerMenu
 } from 'react-icons/gi'
 const NavBar = () => {
-    const [navState, setnavState] = useState(false);
-    
+    const [navState, setnavState] = useState(false)
     return (
-        <div className='fixed z-30 w-[100%] bg-transparent py-4 px-4 '>
-           
-            <GiHamburgerMenu className=' lg:hidden w-10 h-10 cursor-pointer p-2'
-                onClick={
+        <div className='relative text-white w-full bg-black p-3'>
+
+            {/*  */}
+            <GiHamburgerMenu onClick={
                     () => {
                         setnavState(!navState)
                     }
-                }/>
-          
-          
-
-            <div className={`hidden lg:flex p-5 flex-row justify-around items-center gap-4`}>
-            <img src={`./img/logo.png`}
-                className=' flex lg:hidden w-44 h-36 object-cover'
-                alt=""/>
-
-                <ul className="flex flex-col lg:flex-row justify-between gap-10">
-                    <li className="text-lg font-bold">Home</li>
-                    <li className="text-lg font-bold">About</li>
-                    <li className="text-lg font-bold">Skills</li>
-                    <li className="text-lg font-bold">Projects</li>
-                    <li className="text-lg font-bold">Contact</li>
-
-                </ul>
-                <button className="bg-green-700 w-fit outline-none px-3 py-2 cursor-pointer font-bold rounded-lg">Download CV</button>
-            </div>
+                }
+                className='lg:hidden w-8 h-8 cursor-pointer'/> {/*  Nav Small ss */}
 
             {
             navState == true && (
-                <div className={`flex -z-10 mb-6 bg-white bg-opacity-90 text-black fixed lg:hidden p-5 flex-col justify-center items-center place-items-center gap-4 py-10`}>
-
-                    <ul className="flex flex-col lg:flex-row justify-between gap-10">
-                        <li className="text-lg font-bold">Home</li>
-                        <li className="text-lg font-bold">About</li>
-                        <li className="text-lg font-bold">Skills</li>
-                        <li className="text-lg font-bold">Projects</li>
-                        <li className="text-lg font-bold">Contact</li>
-
+                <div className="absolute left-4 text-black top-14 bg-white bg-opacity-50 w-60 h-auto py-8 px-3">
+                    <ul className='flex flex-col gap-4'>
+                        <li className='cursor-pointer text-lg font-bold hover:scale-105'>Home</li>
+                        <li className='cursor-pointer text-lg font-bold hover:scale-105'>Skills</li>
+                        <li className='cursor-pointer text-lg font-bold hover:scale-105'>Projects</li>
+                        <li className='cursor-pointer text-lg font-bold hover:scale-105'>Contact</li>
+                        <button className="w-full bg-green-700 rounded-md px-3 py-2">Download CV</button>
                     </ul>
-                    <button className="bg-green-700 w-fit outline-none px-3 py-2 cursor-pointer font-bold rounded-lg">Download CV</button>
                 </div>
             )
-        } </div>
+        }
+
+            <div className="hidden lg:flex flex-row justify-between items-center gap-3 px-10 py-3">
+
+          
+                <div className="flex flex-row justify-around gap-10 list-none">
+                    <li className='cursor-pointer font-bold hover:scale-105'>Home</li>
+                    <li className='cursor-pointer font-bold hover:scale-105'>Skills</li>
+                    <li className='cursor-pointer font-bold hover:scale-105'>Projects</li>
+                    <li className='cursor-pointer font-bold hover:scale-105'>Contact</li>
+          </div>
+          
+          <button className="w-fit bg-green-700 rounded-md px-3 py-2">Download CV</button>
+            </div>
+
+
+        </div>
     )
 }
 
