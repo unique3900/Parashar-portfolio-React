@@ -20,7 +20,7 @@ const Skills = () => {
         <div className="">
           <h1 className="text-7xl text-center font-bold">My Skills</h1>
         </div>
-        <div className="grid grid-flow-col grid-rows-3
+        <div className="grid grid-flow-row grid-cols-2
         lg:grid-flow-row lg:grid-cols-4 
         gap-14">
           {

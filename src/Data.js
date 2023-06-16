@@ -11,6 +11,21 @@ export const ProjectData = [
     {
         id: 4, title: "Hotel Booking Website", url: "./img/hotel.png", desc: "React JS,Node JS,Mongo DB,Express Js,Tailwindm,Context API.I am currently working on this project will update soon.", git: "https://github.com/unique3900/Hotel-Booking-System"
     },
+    {
+        id: 5, title: "Wil Update Soon", url: "./img/coming.avif", desc: "Will Update with new project after the completion of the project,Thank You!", git: "https://github.com/unique3900"
+    },
+    {
+        id: 6, title: "Wil Update Soon", url: "./img/coming.avif", desc: "Will Update with new project after the completion of the project,Thank You!", git: "https://github.com/unique3900"
+    },
+    {
+        id: 7, title: "Wil Update Soon", url: "./img/coming.avif", desc: "Will Update with new project after the completion of the project,Thank You!", git: "https://github.com/unique3900"
+    },
+    {
+        id: 8, title: "Wil Update Soon", url: "./img/coming.avif", desc: "Will Update with new project after the completion of the project,Thank You!", git: "https://github.com/unique3900"
+    },
+
+    
+   
 ];
 
 

@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import styled from 'styled-components'
 import Projects from './components/Projects'
 import { BrowserRouter } from 'react-router-dom'
+import Contact from './components/Contact'
 
 const Container = styled.div`
 scroll-snap-type: y mandatory;
@@ -23,7 +24,8 @@ const App = () => {
       <NavBar />
       <Hero />
       <Skills />
-      <Projects/>
+        <Projects />
+        <Contact/>
     </Container>
     </BrowserRouter>
 

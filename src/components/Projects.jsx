@@ -22,9 +22,7 @@ const Projects = () => {
                     <h1 className="text-7xl text-center font-bold">Projects</h1>
                 </div>
 
-                <div className="grid grid-flow-col grid-rows-4
-                                lg:grid-flow-row lg:grid-cols-3
-                                gap-14 -mt-5" >
+                <div className="flex flex-col lg:flex-row flex-wrap justify-center gap-5 -mt-5" >
                     {
                         ProjectData.map((item) => {
                             return (
