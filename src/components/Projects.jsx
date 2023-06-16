@@ -16,7 +16,7 @@ scroll-snap-align: center;
 const Projects = () => {
     const navigate=useNavigate();
     return (
-        <Container className="min-h-screen flex flex-col justify-start  items-center px-10 snap-start scroll-smooth py-10">
+        <Container id='projects' className="min-h-screen flex flex-col justify-start  items-center px-10 snap-start scroll-smooth py-10">
             <div className="flex flex-col gap-10 text-white ">
                 <div className="">
                     <h1 className="text-7xl text-center font-bold">Projects</h1>

@@ -47,7 +47,7 @@ const Contact = () => {
       };
 
     return (
-        <Container className="min-h-screen mt-5 overflow-y-scroll flex flex-col  items-center px-20 snap-start scroll-smooth">
+        <Container id='contact' className="min-h-screen mt-5 overflow-y-scroll flex flex-col  items-center px-20 snap-start scroll-smooth">
             <Toaster/>
             <h1 className="text-7xl text-center font-bold text-white">Contact Me</h1>
            

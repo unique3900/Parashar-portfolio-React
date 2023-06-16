@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Projects from './components/Projects'
 import { BrowserRouter } from 'react-router-dom'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 const Container = styled.div`
 scroll-snap-type: y mandatory;
@@ -20,12 +21,13 @@ const App = () => {
   return (
     <BrowserRouter>
       
-      <Container className="min-h-screen shadow-black shadow-sm  flex flex-col scrollbar-hide bg-[url('/img/bg.jpeg')] bg-blend-normal object-cover">
+      <Container className="min-h-screen relative shadow-black shadow-sm  flex flex-col scrollbar-hide bg-[url('/img/bg.jpeg')] bg-blend-normal object-cover">
       <NavBar />
       <Hero />
       <Skills />
         <Projects />
-        <Contact/>
+        <Contact />
+        <Footer className="absolute bottom-0"/>
     </Container>
     </BrowserRouter>
 

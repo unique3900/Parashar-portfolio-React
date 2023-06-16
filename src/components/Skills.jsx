@@ -15,7 +15,7 @@ scroll-snap-align: center;
 `;
 const Skills = () => {
   return (
-    <Container className="min-h-screen flex flex-col justify-start  items-center px-10 snap-center scroll-smooth py-10">
+    <Container id='skills' className="min-h-screen flex flex-col justify-start  items-center px-10 snap-center scroll-smooth py-10">
       <div className="flex flex-col gap-10 text-white ">
         <div className="">
           <h1 className="text-7xl text-center font-bold">My Skills</h1>
