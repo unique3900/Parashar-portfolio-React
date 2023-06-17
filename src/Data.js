@@ -37,7 +37,7 @@ export const skillsData = [
         id:2,title:"Node JS",url:"./img/nodejslogo.png"
     },
     {
-        id:3,title:"Express JS JS",url:"./img/express js.png"
+        id:3,title:"Express JS",url:"./img/express js.png"
     },
     {
         id:4,title:"Mongo DB",url:"./img/mongodblogo.png"

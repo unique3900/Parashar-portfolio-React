@@ -93,7 +93,7 @@ const Contact = () => {
                                     </div>
                                     <div className="flex flex-col w-full gap-2">
                                         <label htmlFor="" className="text-white text-lg">Your Message</label>
-                                        <textarea cols={10} rows={3} name='user_message' type="email" placeholder='Enter Email' className='w-full px-3 py-2 text-black font-bold rounded-lg overflow-auto resize-none' required />
+                                        <textarea cols={10} rows={3} name='user_message' type="email" placeholder='Enter Message' className='w-full px-3 py-2 text-black font-bold rounded-lg overflow-auto resize-none' required />
                                     </div>
                                     <input type="submit" className='w-full px-3 py-2 text-white font-bold bg-[#d127a1] rounded-xl' value={"Send"}/>
                                 </form>

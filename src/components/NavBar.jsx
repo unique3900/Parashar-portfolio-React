@@ -9,7 +9,7 @@ import { Link } from 'react-scroll'
 const NavBar = () => {
     const [navState, setnavState] = useState(false)
     return (
-        <div id='navbar' className='relative sticky  text-white w-full bg-transparent p-3'>
+        <div id='navbar' className='fixed bg-black bg-opacity-10  text-white w-full p-3'>
 
             {/*  */}
             <GiHamburgerMenu onClick={
