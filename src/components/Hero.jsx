@@ -26,7 +26,7 @@ scroll-snap-align: center;
 
 const Hero = () => {
     return (
-        <Container id='hero' className="min-h-screen overflow-y-scroll justify-center  flex flex-col  items-center px-20 snap-start scroll-smooth">
+        <Container id='hero' className=" min-h-screen overflow-y-scroll justify-center  flex flex-col  items-center px-20 snap-start scroll-smooth">
             <div className="flex flex-col lg:flex-row gap-5 w-full h-[770px] lg:h-[500px]  items-center justify-center">
                 <div className="w-full">
                     <div className="flex flex-col h-full  items-start gap-3">
@@ -44,7 +44,7 @@ const Hero = () => {
                                 fov: 90
                             }
                         }
-                        className=''>
+                        className='z-[10000]'>
                         <OrbitControls enableZoom={false}
                             autoRotate={true} />
                         <Stage intensity={1.9}

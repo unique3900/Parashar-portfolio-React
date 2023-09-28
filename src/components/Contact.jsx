@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import styled from 'styled-components'
 import {
@@ -27,7 +27,9 @@ scroll-snap-align: center;
 `;
 const Contact = () => {
     const form = useRef();
-
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
     useEffect(() => {
 // console.log(process.env.SERVICE_ID)
     }, [])
@@ -39,7 +41,10 @@ const Contact = () => {
         emailjs.sendForm( import.meta.env.VITE_SERVICE_ID,import.meta.env.VITE_TEMPLATE_ID, form.current, import.meta.env.VITE_PUBLIC_KEY)
           .then((result) => {
               console.log(result.text);
-              toast.success(<p className='w-full  text-black text-lg font-bold flex gap-2 items-center'>Email Sent,I will Contact you as soon as possible</p>)
+              toast.success(<p className='w-full  text-black text-sm  flex gap-2 items-center'>Email Sent, I will Contact you as soon as possible</p>)
+              setEmail("");
+              setName("");
+              setMessage("");
           }, (error) => {
               toast.error(<p className='w-full  text-black text-lg font-bold flex gap-2 items-center'>Email Sent,I will Contact you as soon as possible</p>)
               console.log(error.text)
@@ -85,17 +90,23 @@ const Contact = () => {
                                 <form action="" ref={form} className='flex flex-col gap-4' onSubmit={sendEmail}>
                                     <div className="flex flex-col w-full gap-2">
                                         <label htmlFor="" className="text-white text-lg">Your Name</label>
-                                        <input type="text" name='user_name' placeholder='Enter Name' className='w-full text-black font-bold px-3 py-2 rounded-lg' required />
+                                        <input type="text" value={name} onChange={(e) => {
+                                            setName(e.target.value)
+                                        }} name='user_name' placeholder='Enter Name' className='w-full text-black font-bold px-3 py-2 rounded-lg' required />
                                     </div>
                                     <div className="flex flex-col w-full gap-2">
                                         <label htmlFor="" className="text-white text-lg">Your Email</label>
-                                        <input type="email" name='user_email' placeholder='Enter Email' className='w-full px-3 py-2 rounded-lg text-black font-bold' required />
+                                        <input type="email" value={email} onChange={(e) => {
+                                            setEmail(e.target.value)
+                                        }} name='user_email' placeholder='Enter Email' className='w-full px-3 py-2 rounded-lg text-black font-bold' required />
                                     </div>
                                     <div className="flex flex-col w-full gap-2">
                                         <label htmlFor="" className="text-white text-lg">Your Message</label>
-                                        <textarea cols={10} rows={3} name='user_message' type="email" placeholder='Enter Message' className='w-full px-3 py-2 text-black font-bold rounded-lg overflow-auto resize-none' required />
+                                        <textarea cols={10} value={message} onChange={(e) => {
+                                            setMessage(e.target.value)
+                                        }} rows={3} name='user_message' type="email" placeholder='Enter Message' className='w-full px-3 py-2 text-black font-bold rounded-lg overflow-auto resize-none' required />
                                     </div>
-                                    <input type="submit" className='w-full px-3 py-2 text-white font-bold bg-[#d127a1] rounded-xl' value={"Send"}/>
+                                    <input type="submit" className='cursor-pointer w-full px-3 py-2 text-white font-bold bg-[#d127a1] rounded-xl' value={"Send"}/>
                                 </form>
                             </div>
                         </div>

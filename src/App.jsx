@@ -21,7 +21,9 @@ const App = () => {
   return (
     <BrowserRouter>
       
-      <Container className="min-h-screen relative shadow-black shadow-sm  flex flex-col scrollbar-hide bg-[url('/img/bg.jpeg')] bg-blend-normal object-cover">
+      <Container className="relative min-h-screen  shadow-black shadow-sm  flex flex-col scrollbar-hide bg-[url('/img/bg.jpeg')] bg-blend-normal object-cover">
+        <div className="absolute w-full h-screen top-0 left-0 bg-gradient-to-t from-black/40"></div>
+
       <NavBar />
       <Hero />
       <Skills />

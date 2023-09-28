@@ -31,7 +31,7 @@ export const ProjectData = [
 
 export const skillsData = [
     {
-        id:1,title:"React Js",url:"./img/reactlogo.png"
+        id:1,title:"React JS",url:"./img/reactlogo.png"
     },
     {
         id:2,title:"Node JS",url:"./img/nodejslogo.png"

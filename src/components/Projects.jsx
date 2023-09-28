@@ -2,7 +2,8 @@ import React from 'react'
 import { useNavigate, useNavigation } from 'react-router-dom';
 import styled from 'styled-components'
 import { ProjectData } from '../Data';
-
+import Project from './Project';
+import { MdOutlineChevronLeft, MdOutlineChevronRight } from 'react-icons/md';
 const Container = styled.div `
 scroll-snap-type: y mandatory;
 scroll-behavior: smooth;
@@ -15,30 +16,34 @@ scroll-snap-align: center;
 `;
 const Projects = () => {
     const navigate=useNavigate();
+
+    const slideLeft = () => {
+        var slider = document.getElementById('slider');
+        slider.scrollLeft = slider.scrollLeft - 460;
+    }
+    const slideRight = () => {
+        var slider = document.getElementById('slider');
+        slider.scrollLeft = slider.scrollLeft + 460;
+    }
     return (
-        <Container id='projects' className="min-h-screen flex flex-col justify-start  items-center px-10 snap-start scroll-smooth py-10">
-            <div className="flex flex-col gap-10 text-white ">
-                <div className="">
-                    <h1 className="text-7xl text-center font-bold">Projects</h1>
-                </div>
-
-                <div className="flex flex-col lg:flex-row flex-wrap justify-center gap-5 -mt-5" >
-                    {
-                        ProjectData.map((item) => {
-                            return (
-                                <div key={item.id} className="flex px-4 py-3 flex-col w-80 justify-center items-center gap-2 shadow-lg shadow-white">
-                                <a href={`${item.git}`} target='_blank'><img src={`${item.url}`} className='w-72 h-72' alt=""/></a> 
-                                    <h4 className="text-lg font-bold whitespace-nowrap">{ item.title}</h4>
-                                    <p className="italic text-md text-start">{item.desc }</p>
-                           </div>
-                            )
-                        })
-                    }
-
-
+        <Container id='projects' className="min-h-screen text-white px-10 snap-center scroll-smooth py-10">
+            <h2 className="text-6xl text-center font-bold">Projects</h2>
+            <div className=''>
+          
+          <div className="group relative flex items-center">
+          <MdOutlineChevronLeft size={40} className='absolute left-1 top-1/2 p-2 cursor-pointer bg-gray-400/60 text-black hover:bg-white rounded-full z-[100] hidden group-hover:flex' onClick={slideLeft}/>
+              <div id={"slider"} className=' relative w-full h-full overflow-x-scroll scrollbar-hide whitespace-nowrap scroll-smooth py-10 gap-4'>
                   
-                </div>
-            </div>
+                  {ProjectData.map((item, index) => (
+                      <Project  key={index} item={item}  />
+                  ))}
+
+
+              </div>
+              <MdOutlineChevronRight size={40} className='absolute right-1 top-1/2 p-2 bg-gray-400/60 text-black hover:bg-white cursor-pointer rounded-full z-[100] hidden group-hover:flex' onClick={slideRight}/>
+          </div>
+    </div>
+    
         </Container>
     )
 }
