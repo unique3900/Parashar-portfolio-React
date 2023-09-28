@@ -13,6 +13,7 @@ import {
 } from '@react-three/fiber';
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { ImCross } from 'react-icons/im';
+import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 const Container = styled.div `
@@ -25,6 +26,19 @@ scroll-snap-align: center;
   display: none;
 }
 `;
+
+const fadeInAnimationVarience = {
+    initial:{
+        opacity:0,
+        x:100,
+    },
+    animate:{
+        opacity: 1,
+        x:0,
+        transition:{delay:0.2}
+    }
+
+}
 const Contact = () => {
     const form = useRef();
     const [name, setName] = useState("");
@@ -80,14 +94,23 @@ const Contact = () => {
 
 
                 <div className="w-full h-auto">
-                    <div className="flex flex-col h-full shadow-white shadow-md outline-white min-w-full gap-3">
-                        <div className="flex flex-col p-10 gap-3 ">
+                    <div
+                  
+                        className="flex flex-col h-full shadow-white shadow-md outline-white min-w-full gap-3">
+                        <div
+                                 
+                            className="flex flex-col p-10 gap-3 ">
                             <div className="text-center">
                                 <h3 className="text-4xl lg:text-5xl  text-white font-bold text-center">Contact Form</h3>
 
                             </div>
                             <div className="">
-                                <form action="" ref={form} className='flex flex-col gap-4' onSubmit={sendEmail}>
+                                <motion.form
+                                     variants={fadeInAnimationVarience}
+                                     initial={"initial"}
+                                     whileInView={"animate"}
+                                     viewport={{ once: false }}
+                                    action="" ref={form} className='flex flex-col gap-4' onSubmit={sendEmail}>
                                     <div className="flex flex-col w-full gap-2">
                                         <label htmlFor="" className="text-white text-lg">Your Name</label>
                                         <input type="text" value={name} onChange={(e) => {
@@ -107,7 +130,7 @@ const Contact = () => {
                                         }} rows={3} name='user_message' type="email" placeholder='Enter Message' className='w-full px-3 py-2 text-black font-bold rounded-lg overflow-auto resize-none' required />
                                     </div>
                                     <input type="submit" className='cursor-pointer w-full px-3 py-2 text-white font-bold bg-[#d127a1] rounded-xl' value={"Send"}/>
-                                </form>
+                                </motion.form>
                             </div>
                         </div>
                     </div>

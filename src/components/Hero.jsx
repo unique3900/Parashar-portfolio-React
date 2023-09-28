@@ -12,7 +12,7 @@ import {
 import { Astronaut } from './3Ds/Astronaut'
 import { Planet } from './3Ds/Planet'
 import styled from 'styled-components'
-
+import { motion } from 'framer-motion';
 const Container = styled.div`
 scroll-snap-type: y mandatory;
 scroll-behavior: smooth;
@@ -24,18 +24,38 @@ scroll-snap-align: center;
 }
 `;
 
+const fadeInAnimateVarience = {
+    initial:{
+        x: 100,
+        opacity:0
+    },
+    animate:{
+        x: 0,
+        opacity: 1,
+        transition: {
+            delay:0.3
+        }
+    },
+    
+}
 const Hero = () => {
     return (
         <Container id='hero' className="z-[1000] min-h-screen overflow-y-scroll justify-center  flex flex-col  items-center px-10 snap-start scroll-smooth">
             <div className="flex flex-col lg:flex-row gap-5 w-full h-[770px] lg:h-[500px]  items-center justify-center">
-                <div className="w-full">
+                <motion.div
+                    variants={fadeInAnimateVarience}
+                    initial={"initial"}
+                    whileInView={"animate"}
+                    viewport={{once:false}}
+                   
+                    className="w-full">
                     <div className="flex flex-col h-full  items-start gap-3">
                         <h1 className="text-5xl lg:text-9xl text-white font-extrabold">Parashar</h1>
                         <h2 className="text-4xl lg:text-7xl font-extrabold text-orange-700">Neupane</h2>
                         <p className=" text-xl text-white">I am Parashar Neupane from Nepal.I am Studying BCA from Tribhuwan University.I am currently learning MERN stack web development and along with my university syllabus.I am currently open for JOB or Internships.Thank You!</p>
 
                     </div>
-                </div>
+                </motion.div>
                 <div className="flex items-center h-[250px] lg:h-full  w-full">
                     <Canvas camera={
                             {
@@ -49,7 +69,7 @@ const Hero = () => {
                         <OrbitControls enableZoom={false}
                             autoRotate={true} />
                         <Stage intensity={1.9}
-                            scale={14} shadows={false}>
+                            scale={12} shadows={false}>
                             <Planet/>
                         </Stage>
                     </Canvas>
