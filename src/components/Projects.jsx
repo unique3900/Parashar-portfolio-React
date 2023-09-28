@@ -19,11 +19,11 @@ const Projects = () => {
 
     const slideLeft = () => {
         var slider = document.getElementById('slider');
-        slider.scrollLeft = slider.scrollLeft - 460;
+        slider.scrollLeft = slider.scrollLeft - 540;
     }
     const slideRight = () => {
         var slider = document.getElementById('slider');
-        slider.scrollLeft = slider.scrollLeft + 460;
+        slider.scrollLeft = slider.scrollLeft + 540;
     }
     return (
         <Container id='projects' className="min-h-screen text-white px-10 snap-center scroll-smooth py-10">
