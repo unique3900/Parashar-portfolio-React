@@ -30,13 +30,8 @@ const Hero = () => {
             <div className="flex flex-col lg:flex-row gap-5 w-full h-[770px] lg:h-[500px]  items-center justify-center">
                 <div className="w-full">
                     <div className="flex flex-col h-full  items-start gap-3">
-<<<<<<< HEAD
                         <h1 className="text-5xl lg:text-9xl text-white font-extrabold">Parashar</h1>
                         <h2 className="text-4xl lg:text-7xl font-extrabold text-orange-700">Neupane</h2>
-                        <p className=" text-lg text-white">I am Parashar Neupane from Nepal.I am Studying BCA from Tribhuwan University.I am currently learning MERN stack web development and along with my university syllabus.I am currently open for JOB or Internships.Thank You!</p>
-=======
-                        <h1 className="text-7xl lg:text-9xl text-white font-extrabold">Parashar</h1>
-                        <h2 className="text-6xl lg:text-7xl font-extrabold text-orange-700">Neupane</h2>
                         <p className=" text-xl text-white">I am Parashar Neupane from Nepal.I am Studying BCA from Tribhuwan University.I am currently learning MERN stack web development and along with my university syllabus.I am currently open for JOB or Internships.Thank You!</p>
 >>>>>>> parent of e6f9975 (Particle js directory change)
                     </div>
