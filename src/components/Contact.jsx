@@ -52,7 +52,7 @@ const Contact = () => {
       };
 
     return (
-        <Container id='contact' className="min-h-screen mt-5 overflow-y-scroll flex flex-col  items-center px-10 snap-start scroll-smooth">
+        <Container id='contact' className="min-h-screen mt-5 overflow-y-scroll flex flex-col  items-center px-20 snap-start scroll-smooth">
             <Toaster/>
             <h1 className="text-7xl text-center font-bold text-white">Contact Me</h1>
            
@@ -80,7 +80,7 @@ const Contact = () => {
 
 
                 <div className="w-full h-auto">
-                    <div className="flex flex-col h-full shadow-white shadow-md outline-white min-w-[100%] gap-3">
+                    <div className="flex flex-col h-full shadow-white shadow-md outline-white min-w-full gap-3">
                         <div className="flex flex-col p-10 gap-3 ">
                             <div className="text-center">
                                 <h3 className="text-4xl lg:text-5xl  text-white font-bold text-center">Contact Form</h3>
