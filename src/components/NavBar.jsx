@@ -10,7 +10,7 @@ import { CgClose } from 'react-icons/cg';
 const NavBar = () => {
     const [navState, setnavState] = useState(false)
     return (
-        <div id='navbar' className='fixed bg-black/5 z-[1000] text-white w-full p-3'>
+        <div id='navbar' className='fixed bg-black/5 z-[2000] text-white w-full p-3'>
 
             {
                 !navState?(<GiHamburgerMenu onClick={
