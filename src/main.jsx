@@ -7,8 +7,6 @@ import './index.css'
 const tagManagerArgs = {
   gtmId: 'GTM-NP7N542V'
 }
-
-
 TagManager.initialize(tagManagerArgs)
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
